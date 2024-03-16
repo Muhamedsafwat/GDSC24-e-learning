@@ -11,7 +11,7 @@ const NavBar = () => {
         <nav className="space-x-10">
           <a href="">Home</a>
           <Link to="error">FAQ</Link>
-          <a href="">About Us</a>
+          <Link to="product">About Us</Link>
           <Link to="" className="px-4 py-2 border-white border-[1px] rounded-md">
             Login
           </Link>
