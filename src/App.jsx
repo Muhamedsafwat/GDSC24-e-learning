@@ -11,6 +11,7 @@ import AllCourses from "./pages/AllCourses.jsx";
 import DetailCourse from "./pages/DetailCourse.jsx";
 import CoursesSucses from "./ezz/CoursesSucses.jsx";
 import Error from "./ezz/Error.jsx"
+import MoreInfo from "./ezz/MoreInfo/MoreInfo.jsx";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/product/:id" Component={DetailCourse} />
         <Route path="/product/:id/sucsses" Component={CoursesSucses} />
         <Route path="/error" Component={Error} />
+        <Route path="/more-info" Component={MoreInfo} />
       </Routes>
     </>
   );

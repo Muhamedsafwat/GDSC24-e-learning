@@ -9,9 +9,9 @@ const NavBar = () => {
           <h1 className=" font-bold text-2xl">EduFree</h1>
         </div>
         <nav className="space-x-10">
-          <a href="">Home</a>
-          <Link to="error">FAQ</Link>
-          <Link to="product">About Us</Link>
+          <a href="/">Home</a>
+          <Link to="/error">FAQ</Link>
+          <Link to="/product">About Us</Link>
           <Link to="" className="px-4 py-2 border-white border-[1px] rounded-md">
             Login
           </Link>

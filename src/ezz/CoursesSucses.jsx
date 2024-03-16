@@ -6,9 +6,9 @@ const CoursesSucses = () => {
     <div id="tabs" className=" courseSucsses d-flex justify-content-center align-items-center flex-column vh-100 mx-auto ">
       <div className=" bg-white p-5 text-center mt-4">
       <img async src={sucsses} alt="sucsses" className=" mx-auto mb-5 " />
-              <h1>Selamat! Kursus Anda Telah Di Buka</h1>
-              <p>Kurus yang anda pilih sudah di buka, Silahkan klik buttondibawah ini</p>
-              <Link to="" className=".button">Buka Kursus</Link>
+              <h1>Selamat! Your Course Has Been Opened</h1>
+              <p>The course you have chosen is now open, please click the button below</p>
+              <Link to="/product" className=".button">Open Courses</Link>
       </div>
     </div>
   )
