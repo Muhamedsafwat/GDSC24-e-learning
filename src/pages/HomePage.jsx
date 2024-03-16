@@ -20,12 +20,14 @@ const HomePage = () => {
     <>
       <NavBar />
       <HeroSection />
+      <div className="container">
       <Stats />
       <Grid />
       <About />
       <Testimonials />
       <FAQ />
       <Blog />
+      </div>
       <Footer />
     </>
   );
@@ -258,7 +260,7 @@ const Testimonials = () => {
           </div>
           <div className="mt-auto ml-auto mr-16 mb-3 flex gap-3">
             {tabs.map((item, index) => (
-              <div
+              <div key={index}
                 className={`size-3 rounded-full cursor-pointer hover:bg-blue-600 duration-200 ${
                   activeTab == index ? "bg-blue-600 scale-x-110" : "bg-blue-300"
                 }`}
@@ -320,7 +322,8 @@ const FAQ = () => {
       </div>
       <div className="w-[60%] ml-auto ">
         {tabs.map((item, index) => (
-          <div className="flex items-start gap-10 py-4 border-b-2 border-b-gray-200 last:border-b-0">
+          <div key={index}
+          className="flex items-start gap-10 py-4 border-b-2 border-b-gray-200 last:border-b-0">
             <div className="text-blue-600 font-semibold text-2xl">
               0{index + 1}
             </div>
