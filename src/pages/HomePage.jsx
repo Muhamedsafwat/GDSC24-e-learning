@@ -21,12 +21,12 @@ const HomePage = () => {
       <NavBar />
       <HeroSection />
       <div className="container">
-      <Stats />
-      <Grid />
-      <About />
-      <Testimonials />
-      <FAQ />
-      <Blog />
+        <Stats />
+        <Grid />
+        <About />
+        <Testimonials />
+        <FAQ />
+        <Blog />
       </div>
       <Footer />
     </>

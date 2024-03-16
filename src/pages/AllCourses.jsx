@@ -2,6 +2,8 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 // import axios from "axios";
 import { useGet, getProduct } from "../Component/useCourse";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 export default function AllCourses() {
   const { data, isLoading, error, isError } = useGet("detall", getProduct);
   if (isLoading) return "Loading...";
@@ -9,7 +11,10 @@ export default function AllCourses() {
   if (error) return "An error has occurred: " + error.message;
 
   return (
-    <div className="container lamia">
+    <>
+    
+      <NavBar />
+    <div className="container lamia my-10">
       <div className="row">
         <div className="w-50 mx-auto form-group has-search">
           <span className="fa fa-search form-control-feedback has-search"></span>
@@ -74,5 +79,7 @@ export default function AllCourses() {
         ))}
       </div>
     </div>
+    <Footer />
+    </>
   );
 }
