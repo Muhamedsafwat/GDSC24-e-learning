@@ -49,9 +49,9 @@ const HeroSection = () => {
             teknologi.
           </p>
           <div className="flex gap-5 text-center align-items-center ">
-            <button className="bg-brandOrange border-2 border-brandOrange text-black hover:brightness-125 duration-150 px-5 py-3 rounded-md  font-bold text-xl">
+            <Link to="/logIn" className="bg-brandOrange border-2 border-brandOrange text-black hover:brightness-125 duration-150 px-5 py-3 rounded-md  font-bold text-xl">
               Join Us
-            </button>
+            </Link>
             <Link to="more-info" className="hover:underline ">More info</Link>
           </div>
         </div>

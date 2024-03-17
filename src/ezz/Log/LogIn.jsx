@@ -28,7 +28,7 @@ const LogIn = () => {
                 <Link to="/" className='signIn mb-3 fs-4 rounded-md mt-4 '> Sign in</Link>
               </form>
                 <div className="register text-center">
-                    <p className=' text-xl'>If you don' have an account,<Link to="/register" className=' underline text-xl ml-2 hover:text-[#FCD980]' >Register Now </Link></p>
+                    <p className=' text-xl text-white'>If you don' have an account,<Link to="/register" className=' underline text-xl ml-2 hover:text-[#FCD980]' >Register Now </Link></p>
                 </div>
             </div>
             </div>
