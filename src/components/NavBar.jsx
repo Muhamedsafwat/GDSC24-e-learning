@@ -12,7 +12,7 @@ const NavBar = () => {
           <a href="/">Home</a>
           <Link to="/error">FAQ</Link>
           <Link to="/product">About Us</Link>
-          <Link to="" className="px-4 py-2 border-white border-[1px] rounded-md">
+          <Link to="/logIn" className="px-4 py-2 border-white border-[1px] rounded-md">
             Login
           </Link>
         </nav>
