@@ -6,13 +6,18 @@ const NavBar = () => {
     <div className="bg-brandBlue py-4 text-white">
       <div className="flex px-16 justify-between ">
         <div>
-          <h1 className=" font-bold text-2xl">EduFree</h1>
+          <Link to={"/"} className=" font-bold text-2xl">
+            EduFree
+          </Link>
         </div>
         <nav className="space-x-10">
-          <a href="/">Home</a>
-          <Link to="/error">FAQ</Link>
-          <Link to="/product">About Us</Link>
-          <Link to="/logIn" className="px-4 py-2 border-white border-[1px] rounded-md">
+          <Link to="/">Home</Link>
+          <a href="/#faq">FAQ</a>
+          <Link to="/product">Courses</Link>
+          <Link
+            to="/logIn"
+            className="px-4 py-2 border-white border-[1px] rounded-md"
+          >
             Login
           </Link>
         </nav>

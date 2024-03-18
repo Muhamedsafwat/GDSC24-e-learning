@@ -49,10 +49,15 @@ const HeroSection = () => {
             teknologi.
           </p>
           <div className="flex gap-5 text-center align-items-center ">
-            <Link to="/logIn" className="bg-brandOrange border-2 border-brandOrange text-black hover:brightness-125 duration-150 px-5 py-3 rounded-md  font-bold text-xl">
+            <Link
+              to="/logIn"
+              className="bg-brandOrange border-2 border-brandOrange text-black hover:brightness-125 duration-150 px-5 py-3 rounded-md  font-bold text-xl"
+            >
               Join Us
             </Link>
-            <Link to="more-info" className="hover:underline ">More info</Link>
+            <Link to="more-info" className="hover:underline ">
+              More info
+            </Link>
           </div>
         </div>
         <div>
@@ -261,7 +266,8 @@ const Testimonials = () => {
           </div>
           <div className="mt-auto ml-auto mr-16 mb-3 flex gap-3">
             {tabs.map((item, index) => (
-              <div key={index}
+              <div
+                key={index}
                 className={`size-3 rounded-full cursor-pointer hover:bg-blue-600 duration-200 ${
                   activeTab == index ? "bg-blue-600 scale-x-110" : "bg-blue-300"
                 }`}
@@ -311,7 +317,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="px-16 flex py-16">
+    <section id="faq" className="px-16 flex py-16">
       <div>
         <h2 className="font-semibold text-4xl mb-4">
           Frequently Asked <br /> Questions
@@ -323,8 +329,10 @@ const FAQ = () => {
       </div>
       <div className="w-[60%] ml-auto ">
         {tabs.map((item, index) => (
-          <div key={index}
-          className="flex items-start gap-10 py-4 border-b-2 border-b-gray-200 last:border-b-0">
+          <div
+            key={index}
+            className="flex items-start gap-10 py-4 border-b-2 border-b-gray-200 last:border-b-0"
+          >
             <div className="text-blue-600 font-semibold text-2xl">
               0{index + 1}
             </div>
