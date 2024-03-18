@@ -211,25 +211,19 @@ const Testimonials = () => {
     {
       text: "Materi yang disampaikan mudah dimengerti, kualitas instruktur sangat baik serta  responnya yang cepat. So, kursus disini sangat sangat saya rekomendasikan!!",
       author: "Muhamed Safwat",
-      title: "Core-team",
-      profilePic: avatar,
-    },
-    {
-      text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur temporibus quam quod a at repellendus alias veniam beatae eveniet voluptatibus quisquam tempora architecto, dolorum itaque corporis maxime, tempore officia velit.",
-      author: "User 2",
       title: "CEO",
       profilePic: avatar,
     },
     {
-      text: "Materi yang disampaikan mudah dimengerti, kualitas instruktur sangat baik serta  responnya yang cepat. So, kursus disini sangat sangat saya rekomendasikan!!",
-      author: "Random client",
+      text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur temporibus quam quod a at repellendus alias veniam beatae eveniet voluptatibus quisquam tempora architecto, dolorum itaque corporis maxime, tempore officia velit.",
+      author: "Karam",
       title: "Vice President",
       profilePic: avatar,
     },
     {
-      text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur temporibus quam quod a at repellendus alias veniam beatae eveniet voluptatibus quisquam tempora architecto, dolorum itaque corporis maxime, tempore officia velit.",
-      author: "Orabi",
-      title: "President",
+      text: "Materi yang disampaikan mudah dimengerti, kualitas instruktur sangat baik serta  responnya yang cepat. So, kursus disini sangat sangat saya rekomendasikan!!",
+      author: "lamia",
+      title: "Core-Team",
       profilePic: avatar,
     },
     {
@@ -238,6 +232,13 @@ const Testimonials = () => {
       title: "Frontend lead",
       profilePic: avatar,
     },
+    {
+      text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur temporibus quam quod a at repellendus alias veniam beatae eveniet voluptatibus quisquam tempora architecto, dolorum itaque corporis maxime, tempore officia velit.",
+      author: "Orabi",
+      title: "President",
+      profilePic: avatar,
+    },
+    
   ];
 
   return (
