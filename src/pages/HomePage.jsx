@@ -57,7 +57,7 @@ const HeroSection = () => {
             >
               Join Us
             </Link>
-            <Link to="more-info" className="hover:underline ">
+            <Link to="/more-info" className="hover:underline ">
               More info
             </Link>
           </div>
@@ -395,16 +395,22 @@ const Blog = () => {
     <section className="px-16 my-16">
       <div className="flex justify-between">
         <h2 className="font-bold text-3xl">Blog, Berita dan Event</h2>
-        <p className="group cursor-pointer relative pr-4 text-gray-600">
-          Lihat Semua
+        <Link
+          to="/blogs"
+          className="bg-brandOrange border-2 border-brandOrange text-black hover:brightness-125 duration-150 px-5 py-3 rounded-md  font-bold text-xl"
+        >
+          All Blogs
+        </Link>
+        {/* <Link to="/blogs" className="group cursor-pointer relative pr-4 text-xl text-gray-600">
+          All Blogs
           <span className="group-hover:translate-x-2 absolute right-0 duration-100">
             &gt;
           </span>
-        </p>
+        </Link> */}
       </div>
       <div className="flex flex-wrap justify-evenly mt-16">
         {blogs.map((item, index) => (
-          <div
+          <Link to="/blogPage"
             key={index}
             className=" min-w-72 max-w-96 mb-10 rounded-lg cursor-pointer hover:translate-y-[-8px] duration-150"
           >
@@ -422,7 +428,7 @@ const Blog = () => {
                 </span>
               </p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>
@@ -475,7 +481,7 @@ const LogIn = () => {
                   Remember me
                 </label>
               </div>
-              <Link to="/" className="signIn mb-3 fs-4 rounded-md mt-4 ">
+              <Link to="/" className="signIn mb-3 fs-4 rounded-md mt-4 hover:bg-[#f4db9d]">
                 Register
               </Link>
             </form>
@@ -528,7 +534,7 @@ const Courses = () => {
       </div>
       <div className="row">
         {data?.map((data) => (
-          <div className="col-md-4 my-4" key={data?.id}>
+          <div className="col-md-4 my-4 hover:translate-y-[-8px] duration-150 rounded-lg" key={data?.id}>
             <Link to={`/product/${data?.id}`} className=" link">
               <img
                 src={data?.image}

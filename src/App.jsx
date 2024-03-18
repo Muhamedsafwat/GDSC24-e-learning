@@ -11,9 +11,10 @@ import AllCourses from "./pages/AllCourses.jsx";
 import DetailCourse from "./pages/DetailCourse.jsx";
 import CoursesSucses from "./ezz/CoursesSucses.jsx";
 import Error from "./ezz/Error.jsx";
-import MoreInfo from "./ezz/MoreInfo/MoreInfo.jsx";
+import MoreInfo from "./pages/MoreInfo.jsx";
 import LogIn from "./ezz/Log/LogIn.jsx";
 import AllBlogs from "./pages/AllBlogs.jsx"
+import BlogPage from "./ezz/BlogPage/BlogPage.jsx"
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/logIn" Component={LogIn} />
         <Route path="/register" Component={LogIn} />
         <Route path="/blogs" Component={AllBlogs}/>
+        <Route path="/blogPage" Component={BlogPage}/>
         <Route path="/*" Component={Error} />
       </Routes>
     </>

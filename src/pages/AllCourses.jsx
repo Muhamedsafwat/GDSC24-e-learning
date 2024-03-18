@@ -36,7 +36,7 @@ export default function AllCourses() {
 
         <div className="row">
           {data?.map((data) => (
-            <div className="col-md-4 my-4" key={data?.id}>
+            <div className="col-md-4 my-4 hover:translate-y-[-8px] duration-150" key={data?.id}>
               <Link to={`/product/${data?.id}`} className=" link">
                 <img
                   src={data?.image}
