@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 //import components
 import NavBar from "../components/NavBar";
@@ -25,8 +25,10 @@ const HomePage = () => {
         <Stats />
         <Grid />
         <About />
+        <Courses />
         <Testimonials />
         <FAQ />
+        <LogIn />
         <Blog />
       </div>
       <Footer />
@@ -389,7 +391,7 @@ const Blog = () => {
     },
   ];
   return (
-    <section className="px-16">
+    <section className="px-16 my-16">
       <div className="flex justify-between">
         <h2 className="font-bold text-3xl">Blog, Berita dan Event</h2>
         <p className="group cursor-pointer relative pr-4 text-gray-600">
@@ -419,6 +421,154 @@ const Blog = () => {
                 </span>
               </p>
             </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+//register
+const LogIn = () => {
+  return (
+    <>
+      <div className="LogIn container px-16">
+        <Link className="home text-2xl text-white" to="/">
+          {" "}
+          &#8592; Home Page{" "}
+        </Link>
+        <div id="login-page">
+          <div className="background">
+            <h1>Online Learning Mangement System</h1>
+          </div>
+          <div className="login w-50">
+            <h2 className="login-title text-4xl mb-4 pr-10 ">Register</h2>
+            <p className="notice text-xl text-white-50 mb-6">
+              Create a new account and join us
+            </p>
+            <form className="form-login">
+              <div className="input-email">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Enter your e-mail"
+                  className=" p-2 rounded-md fs-5 "
+                  required
+                />
+              </div>
+              <div className="input-password">
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Enter your password"
+                  className=" p-2 rounded-md fs-5"
+                  required
+                />
+              </div>
+              <div className="checkbox">
+                <input type="checkbox" id="remember" className=" ml-3 " />
+                <label
+                  htmlFor="remember"
+                  className="fs-4 ml-2 pl-3 text-white-50"
+                >
+                  Remember me
+                </label>
+              </div>
+              <Link to="/" className="signIn mb-3 fs-4 rounded-md mt-4 ">
+                Register
+              </Link>
+            </form>
+            <div className="register text-center">
+              <p className=" text-xl text-white">
+                Already have an account ?
+                <Link
+                  to="/register"
+                  className=" underline text-xl ml-2 hover:text-[#FCD980]"
+                >
+                  Login
+                </Link>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+//Courses
+const Courses = () => {
+  const [data, setData] = useState(null);
+
+  const getData = () => {
+    fetch(`http://localhost:3000/products/`)
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data.slice(0, 3));
+      });
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  return (
+    <section className="px-16 py-20 ">
+      <div className="flex justify-between items-center">
+        <h2 className="font-bold text-3xl">
+          Rekomendasi Kursus <br /> Untuk Kamu
+        </h2>
+        <Link
+          to="/product"
+          className="bg-brandOrange border-2 border-brandOrange text-black hover:brightness-125 duration-150 px-5 py-3 rounded-md  font-bold text-xl"
+        >
+          All courses
+        </Link>
+      </div>
+      <div className="row">
+        {data?.map((data) => (
+          <div className="col-md-4 my-4" key={data?.id}>
+            <Link to={`/product/${data?.id}`} className=" link">
+              <img
+                src={data?.image}
+                alt="img1"
+                height={300}
+                className="w-100"
+              />
+              <div className="text d-flex justify-content-between ">
+                <h2 className="h5 my-3 fw-bold">{data?.title}</h2>
+                <div className="rate d-flex justify-content-center align-item-center">
+                  <span className="">
+                    <i
+                      className="fa-solid fa-star fa-sm  "
+                      style={{ color: "#FFD43B" }}
+                    ></i>
+                  </span>
+                  <p className="">{data?.rating?.rate}</p>
+                </div>
+              </div>
+              <p className="dec">{data?.description}</p>
+              <div className="d-flex justify-content-around ">
+                <div className="clock icon">
+                  <span>
+                    <i className="fa-regular fa-clock mx-1"></i>
+                    {data?.date}
+                  </span>
+                </div>
+                <div className="video icon">
+                  <span>
+                    <i className="fa-regular fa-circle-play mx-1"></i>
+                    {data?.rating?.count}
+                  </span>
+                </div>
+                <div className="view icon">
+                  <span>
+                    <i className="fa-regular fa-user mx-1"></i>
+                    {data?.people}
+                  </span>
+                </div>
+              </div>
+            </Link>
           </div>
         ))}
       </div>
