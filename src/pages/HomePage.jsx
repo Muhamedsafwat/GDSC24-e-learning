@@ -238,7 +238,6 @@ const Testimonials = () => {
       title: "President",
       profilePic: avatar,
     },
-    
   ];
 
   return (
@@ -434,10 +433,6 @@ const LogIn = () => {
   return (
     <>
       <div className="LogIn container px-16">
-        <Link className="home text-2xl text-white" to="/">
-          {" "}
-          &#8592; Home Page{" "}
-        </Link>
         <div id="login-page">
           <div className="background">
             <h1>Online Learning Mangement System</h1>
