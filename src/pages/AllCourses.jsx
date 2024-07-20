@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import { PRODCUTS } from "../../../data";
+import { PRODCUTS } from "../../data";
 export default function AllCourses() {
   // const { data, isLoading, error, isError } = useGet("detall", getProduct);
   // if (isLoading)

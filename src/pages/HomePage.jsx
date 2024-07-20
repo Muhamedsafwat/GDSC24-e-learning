@@ -14,7 +14,7 @@ import aboutUs from "../assets/landingpage1.png";
 import avatar from "../assets/testimonials1.png";
 import blog1 from "../assets/blog1.png";
 import blog2 from "../assets/blog2.png";
-import { PRODCUTS } from "../../../data";
+import { PRODCUTS } from "../../data";
 
 const HomePage = () => {
   return (

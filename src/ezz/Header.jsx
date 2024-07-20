@@ -4,7 +4,8 @@ import polygon from "./images/Polygon 4.svg";
 import { useParams } from "react-router-dom";
 
 import NavBar from "../components/NavBar";
-import { PRODCUTS } from "../../../data";
+
+import { PRODCUTS } from "../../data";
 
 const Header = () => {
   const { id } = useParams();

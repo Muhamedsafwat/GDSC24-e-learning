@@ -6,7 +6,7 @@ import img4 from "../assets/blog4.avif";
 import img5 from "../assets/blog5.avif";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
-import { PRODCUTS } from "../../../data";
+import { PRODCUTS } from "../../data";
 
 export default function llBlogs() {
   // const { data, isLoading, error } = useGet("blogs", getProduct);
