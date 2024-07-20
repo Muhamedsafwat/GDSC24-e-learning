@@ -9,7 +9,7 @@ const content1 = [
       L2: "Dapat membangun website sendiri" ,
       L3: "Menunjang karir"
     }
-  },
+  }, 
   {
     title : "instructor Kursus" ,
     p1:'Mampu menjalankan bisnis aplikasi dan software',
