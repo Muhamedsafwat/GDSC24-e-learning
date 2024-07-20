@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import { useState,} from "react";
 import { Link } from "react-router-dom";
 //import components
 import NavBar from "../components/NavBar";
@@ -15,6 +14,7 @@ import aboutUs from "../assets/landingpage1.png";
 import avatar from "../assets/testimonials1.png";
 import blog1 from "../assets/blog1.png";
 import blog2 from "../assets/blog2.png";
+import { PRODCUTS } from "../../../data";
 
 const HomePage = () => {
   return (
@@ -251,7 +251,7 @@ const Testimonials = () => {
         </p>
       </div>
       <div className="w-2/3 ml-auto">
-        <p className="text-2xl font-medium h-24">"{tabs[activeTab].text}"</p>
+        <p className="text-2xl font-medium h-24">&quot;{tabs[activeTab].text}&quot;</p>
         <div className="flex">
           <div className="flex mt-10 gap-2">
             <img
@@ -500,19 +500,21 @@ const LogIn = () => {
 
 //Courses
 const Courses = () => {
-  const [data, setData] = useState(null);
 
-  const getData = () => {
-    fetch(`http://localhost:3000/products/`)
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data.slice(0, 3));
-      });
-  };
+  const data = PRODCUTS.slice(0, 3)
 
-  useEffect(() => {
-    getData();
-  }, []);
+  // const [data, setData] = useState(null);
+  // const getData = () => {
+  //   fetch(`http://localhost:3000/products/`)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setData(data.slice(0, 3));
+  //     });
+  // };
+
+  // useEffect(() => {
+  //   getData();
+  // }, []);
 
   return (
     <section className="px-16 py-20 ">

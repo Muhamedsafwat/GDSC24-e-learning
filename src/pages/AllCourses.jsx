@@ -1,14 +1,14 @@
 import { Link, NavLink } from "react-router-dom";
-// import axios from "axios";
-import { useGet, getProduct } from "../Component/useCourse";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import { PRODCUTS } from "../../../data";
 export default function AllCourses() {
-  const { data, isLoading, error, isError } = useGet("detall", getProduct);
-  if (isLoading)
-    return <h2 className=" mt-20 mx-auto w-fit text-3xl ">Loading...</h2>;
+  // const { data, isLoading, error, isError } = useGet("detall", getProduct);
+  // if (isLoading)
+  //   return <h2 className=" mt-20 mx-auto w-fit text-3xl ">Loading...</h2>;
 
-  if (error) return "An error has occurred: " + error.message;
+  // if (error) return "An error has occurred: " + error.message;
+  const data = PRODCUTS;
 
   return (
     <>
