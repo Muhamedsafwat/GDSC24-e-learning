@@ -1,5 +1,3 @@
-import React from "react";
-import { useGet, getProduct } from "../Component/useCourse";
 import { NavLink } from "react-router-dom";
 import img1 from "../assets/blog.jpg";
 import img2 from "../assets/blog2.avif";
@@ -8,13 +6,15 @@ import img4 from "../assets/blog4.avif";
 import img5 from "../assets/blog5.avif";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import { PRODCUTS } from "../../data";
 
 export default function llBlogs() {
-  const { data, isLoading, error } = useGet("blogs", getProduct);
-  if (isLoading) return "Loading...";
+  // const { data, isLoading, error } = useGet("blogs", getProduct);
+  // if (isLoading) return "Loading...";
 
-  if (error) return "An error has occurred: " + error.message;
-  console.log(data);
+  // if (error) return "An error has occurred: " + error.message;
+  // console.log(data);
+  const data = PRODCUTS ;
   return (
     <>
     <NavBar />

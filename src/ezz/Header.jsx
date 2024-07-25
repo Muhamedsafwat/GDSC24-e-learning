@@ -1,28 +1,28 @@
 "use clientS";
 import "./Header.css";
 import polygon from "./images/Polygon 4.svg";
-import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import NavBar from "../components/NavBar";
 
+import { PRODCUTS } from "../../data";
+
 const Header = () => {
   const { id } = useParams();
-  console.log(id);
+  const data = PRODCUTS[id-1];
+  // const [data, setData] = useState(null);
 
-  const [data, setData] = useState(null);
+  // const getData = () => {
+  //   fetch(`http://localhost:3000/products/${id}`)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setData(data);
+  //     });
+  // };
 
-  const getData = () => {
-    fetch(`http://localhost:3000/products/${id}`)
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-      });
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
+  // useEffect(() => {
+  //   getData();
+  // }, []);
 
   return (
     <>

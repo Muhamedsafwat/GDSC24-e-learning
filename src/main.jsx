@@ -5,7 +5,8 @@ import "@fortawesome/fontawesome-free/css/all.min.css"
 // import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
-import { QueryClient, QueryClientProvider } from 'react-query';
+import { QueryClient, QueryClientProvider } from "react-query";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -19,9 +20,10 @@ const queryClient = new QueryClient({
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
-    <QueryClientProvider client={queryClient}>
-      <App />
-    </QueryClientProvider>
+      <QueryClientProvider client={queryClient}>
+        <ScrollToTop />
+        <App />
+      </QueryClientProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

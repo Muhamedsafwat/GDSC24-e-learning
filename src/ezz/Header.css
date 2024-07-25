@@ -102,7 +102,9 @@
   display: block;
   background-color: #FCD980;
   color: black;
+  --webkit-width: fit-content;
   width: fit-content;
+  --mozila-width: fit-content;
   margin: 40px auto;
   padding: 25px 35px;
   font-weight: 600;

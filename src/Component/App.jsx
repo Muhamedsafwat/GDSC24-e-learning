@@ -10,8 +10,8 @@ function App() {
       path: "/",
       element: <Layout></Layout>,
       children: [
-        { path: "product", element: <AllCourses></AllCourses> },
-        { path: "product/:id", element: <DetailCourse></DetailCourse> },
+        { path: "product", element: <AllCourses /> },
+        { path: "product/:id", element: <DetailCourse /> },
       ],
     },
   ]);

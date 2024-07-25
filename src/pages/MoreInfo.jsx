@@ -1,4 +1,3 @@
-import React from "react";
 import img from "../assets/info.jpg";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
